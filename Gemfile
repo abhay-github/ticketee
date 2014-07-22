@@ -32,6 +32,26 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+	gem 'rspec-rails', "~> 2.14"
+	gem 'letter_opener'
+	# The following optional lines are part of the advanced setup.
+    gem 'guard-rspec', '2.5.0'
+    gem 'spork-rails', '4.0.0'
+    gem 'guard-spork', '1.5.0'
+    gem 'childprocess', '0.3.6'
+end
+
+group :test do
+	gem 'capybara', '2.1.0'
+	gem 'selenium-webdriver', '2.35.1'
+    gem 'factory_girl_rails', '4.2.0'
+    gem 'database_cleaner', github: 'bmabey/database_cleaner'
+    gem 'launchy'
+    # Uncomment these lines on Linux.
+    gem 'libnotify', '0.8.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
